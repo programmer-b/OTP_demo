@@ -1,0 +1,91 @@
+{
+  "project_info": {
+    "project_number": "721098962234",
+    "firebase_url": "https://dantech-solutions-default-rtdb.firebaseio.com",
+    "project_id": "dantech-solutions",
+    "storage_bucket": "dantech-solutions.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721098962234:android:01d56c69683134ecd60c03",
+        "android_client_info": {
+          "package_name": "com.kkash.android.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721098962234-3cpg95q3eqq6mksipt6m8ka00ist561j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kkash.android.app",
+            "certificate_hash": "89c486e29c810242fddce40aa503dc87c892f0fb"
+          }
+        },
+        {
+          "client_id": "721098962234-0k8234v144pdh67denbr07naqcau50np.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqbuneva9i_tLJu5xCu-ni9wHFBqToW7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721098962234-0k8234v144pdh67denbr07naqcau50np.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "721098962234-74tg4dq40lho6mifqpo2r81bj0m9to4g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kPesa"
+              }
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:721098962234:android:5d7746aa778c7c25d60c03",
+        "android_client_info": {
+          "package_name": "com.otp.validus_otp_demo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "721098962234-0k8234v144pdh67denbr07naqcau50np.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDqbuneva9i_tLJu5xCu-ni9wHFBqToW7A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "721098962234-0k8234v144pdh67denbr07naqcau50np.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "721098962234-74tg4dq40lho6mifqpo2r81bj0m9to4g.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.kPesa"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
