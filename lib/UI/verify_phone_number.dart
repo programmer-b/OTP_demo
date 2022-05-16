@@ -71,7 +71,7 @@ class _VerifyPhoneNumberState extends State<VerifyPhoneNumber>
             context,
             MaterialPageRoute(
                 builder: (context) =>
-                    HomeScreen(userId: userCredential.user?.uid)));
+                    const HomeScreen()));
       },
       onLoginFailed: (authException) {
         _showSnackBar('Something went wrong!');
@@ -80,7 +80,6 @@ class _VerifyPhoneNumberState extends State<VerifyPhoneNumber>
       },
       builder: (context, controller) {
         return Scaffold(
-          backgroundColor: Colors.white54,
           appBar: AppBar(
             title: const Text('Verify'),
             actions: [

@@ -8,18 +8,33 @@ class AuthenticationScreen extends StatefulWidget {
 }
 
 class _AuthenticationScreenState extends State<AuthenticationScreen> {
+  void _showSnackBar(String message) {
+    ScaffoldMessenger.of(context).showSnackBar(
+      SnackBar(
+        content: Text(message),
+      ),
+    );
+  }
+
   final _formKey = GlobalKey<FormState>();
   String phoneNumber = '';
   @override
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.white54,
         body: Padding(
           padding: const EdgeInsets.all(15),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.center,
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: [
+              const Text(
+                'Login',
+                style: TextStyle(fontSize: 40),
+              ),
+              const SizedBox(
+                height: 15,
+              ),
               const Text(
                 "We'll send an SMS with a verification code...",
                 style: TextStyle(fontSize: 22),
@@ -57,8 +72,27 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
                     debugPrint(phoneNumber);
                     showSnackBar('Please enter a valid phone number!');
                   } else {
-
-                    Navigator.push(context, MaterialPageRoute(builder: (context) => VerifyPhoneNumber(phone: phoneNumber)));
+                    showDialog<String>(
+                      context: context,
+                      builder: (BuildContext context) => AlertDialog(
+                        title: const Text('Confirm your phone number.'),
+                        content: Text('Verify $phoneNumber ? '),
+                        actions: <Widget>[
+                          TextButton(
+                            onPressed: () => Navigator.pop(context, 'Cancel'),
+                            child: const Text('No'),
+                          ),
+                          TextButton(
+                            onPressed: () => Navigator.pushReplacement(
+                                context,
+                                MaterialPageRoute(
+                                    builder: (context) =>
+                                        VerifyPhoneNumber(phone: phoneNumber))),
+                            child: const Text('Yes'),
+                          ),
+                        ],
+                      ),
+                    );
                   }
                 },
               ),
@@ -68,5 +102,4 @@ class _AuthenticationScreenState extends State<AuthenticationScreen> {
       ),
     );
   }
-
 }
